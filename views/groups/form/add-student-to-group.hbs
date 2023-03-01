@@ -1,0 +1,39 @@
+<h2>Add student to group {{oneGroup.groupName}} </h2>
+
+
+
+
+<form method="POST" action="/school/group/{{oneGroup.id}}">
+   <p>
+       <label for="name">name</label>
+   </p>
+   <p>
+       <input type="text" name="name" required>
+   </p>
+
+    <p>
+        <label for="surname">surname</label>
+    </p>
+    <p>
+        <input type="text" name="surname" required>
+    </p>
+
+    <p>
+        <label for="mail">mail</label>
+    </p>
+    <p>
+        <input type="mail" name="mail" required>
+    </p>
+    <p>
+        <label >notes</label>
+    </p>
+    <p>
+        <textarea name="notes" rows="5" cols="33"></textarea>
+    </p>
+    <button type="submit">Add</button>
+
+
+
+
+
+</form>

@@ -1,0 +1,50 @@
+<a href="/school/students/add-student">Add student</a>
+
+
+
+<div class="background">
+    {{#if students}}
+        <h2>Students list:</h2>
+    {{else}}
+        <h3>No students in database. Add students.</h3>
+    {{/if}}
+
+
+
+
+{{#each students}}
+
+   <div>
+
+       <div>
+           {{this.name}} {{this.surname}}
+
+           {{#if this.groupId}}
+
+               {{this.groupName}}
+
+           {{else}}
+               <strong>Not assigned to any group. Edit student to assign.</strong>
+           {{/if}}
+
+       </div>
+
+
+       <form method="POST" action="/school/student/edit/{{students.id}}?_method=PUT">
+           <button type="submit">edit student</button>
+       </form>
+
+       <form method="POST" action="/school/student/delete{{students.id}}?_method=DELETE">
+           <button type="submit">delete student</button>
+       </form>
+
+
+
+
+   </div>
+
+{{/each}}
+
+
+
+</div>

@@ -1,0 +1,69 @@
+<div class="background">
+
+<h2>Add new student</h2>
+
+    <form method="POST" action="/school/students/added">
+        <div>
+            <p>
+                <label for="name">name</label>
+            </p>
+            <p>
+                <input type="text" name="name" required>
+            </p>
+
+            <p>
+                <label for="surname">surname</label>
+            </p>
+            <p>
+                <input type="text" name="surname" required>
+            </p>
+
+            <p>
+                <label for="mail">mail</label>
+            </p>
+            <p>
+                <input type="mail" name="mail" required>
+            </p>
+            <p>
+                <label> notes </label>
+            </p>
+            <p>
+                <textarea name="notes" rows="5" cols="33"></textarea>
+            </p>
+        </div>
+        
+        <div>
+            <p>
+                    {{#if groups}}
+                        <h3>
+                            Choose a group
+                        </h3>
+                        {{#each groups}}
+                            <input type="radio" name="groupId" id="{{this.groupName}}" value="{{this.id}}" >
+                            <label for="{{this.groupName}}">{{this.groupName}}</label>
+                        {{/each}}
+
+                    {{else}}
+                        <strong>
+                            No groups to choose in database. <br>
+                            Student will be added to main list.
+                        </strong>
+                    {{/if}}
+
+                </select>
+             
+            </strong>
+            
+
+        </div>
+        
+        <button type="submit">Add</button>
+
+
+
+
+
+    </form>
+
+
+</div>

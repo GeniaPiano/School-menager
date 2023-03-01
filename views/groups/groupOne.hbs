@@ -1,0 +1,50 @@
+<div class="background">
+    <a href="/school/group/edit-group/{{oneGroup.id}}">Edit group</a>
+    <a href="/school/group/{{oneGroup.id}}/add-student">Add student to this group</a>
+
+    {{#if students}}
+    {{else}}
+        <form method="POST" action="/school/{{oneGroup.id}}?_method=delete">
+            <button type="submit">Delete group</button>
+        </form>
+    {{/if}}
+
+
+
+</div>
+
+<div class="background">
+
+    <h2>
+        {{oneGroup.groupName}}
+    </h2>
+
+    <h3>
+        {{oneGroup.teacherName}}
+    </h3>
+
+    {{#if students}}
+        <h3>
+            Students:
+        </h3>
+
+        {{#each students}}
+            <div>
+               {{this.name}} {{this.surname}}
+
+                    <a href="">edit student</a>
+                    <form method="POST" action="/school/students/edit/{{@root.oneGroup.id}}/{{this.id}}?_method=put">
+                        <button type="submit">Remove from group</button>
+                    </form>
+
+            </div>
+        {{/each}}
+
+    {{else}}
+        <p>No students in this group.</p>
+        <a href="/school/group/{{oneGroup.id}}/add-student">Add student.</a>
+
+    {{/if}}
+
+
+</div>

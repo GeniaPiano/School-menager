@@ -1,0 +1,24 @@
+<a href="school/add-new-group">Add group</a>
+<a href="/school/students/add-student">Add student</a>
+<div>
+
+    {{#if groups}}
+        {{#each groups}}
+            <div class="background">
+
+                <h3> {{this.groupName}} </h3>
+                <div> {{this.teacherName}} </div>
+                <div>Students: how many? </div>
+                <a href="/school/group/{{this.id}}">Details</a>
+
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="background">
+            <h2>
+                No groups in database
+            </h2>
+        </div>
+    {{/if}}
+
+</div>

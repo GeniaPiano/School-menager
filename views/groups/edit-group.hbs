@@ -1,0 +1,29 @@
+<div class="background">
+    <h2>Editing group {{oneGroup.groupName}}</h2>
+    <a href="/school/group/{{oneGroup.id}}">go back</a>
+</div>
+
+<div class="background">
+
+    <form method="POST" action="/school/group/group-edited/{{oneGroup.id}}?_method=PUT">
+        <p>
+            <label>group name</label>
+        </p>
+        <p>
+            <input value="{{oneGroup.groupName}}" type="text" name="groupName" required>
+        </p>
+
+        <p>
+            <label>teacher</label>
+        </p>
+        <p>
+            <input value="{{oneGroup.teacherName}}" type="text" name="teacherName">
+        </p>
+
+        <button type="submit">Save</button>
+
+    </form>
+</div>
+
+
+
