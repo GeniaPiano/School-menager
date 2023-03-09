@@ -15,9 +15,10 @@ class StudentRecord {
 
 class GroupRecord {
     constructor(obj) {
-        const { id, groupName, teacherName} = obj;
+        const { id, groupName, level, teacherName} = obj;
         this.id = id;
         this.groupName = groupName;
+        this.level = level;
         this.teacherName = teacherName;
 
 

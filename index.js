@@ -5,6 +5,9 @@ const methodOverride = require('method-override');
 const {homeRouter} = require('./routes/home');
 const {schoolRouter} = require('./routes/school');
 const {studentsRouter} = require("./routes/students");
+const {scheduleRouter} = require("./routes/schedule");
+const {teachersRouter} = require("./routes/teachers");
+
 
 const app = express();
 
@@ -26,6 +29,8 @@ app.set('view engine', '.hbs');
 app.use('/', homeRouter);
 app.use('/school', schoolRouter);
 app.use('/school/students', studentsRouter);
+app.use('/school/schedule', scheduleRouter);
+app.use('/school/teachers', teachersRouter);
 
 app.listen(3000, 'localhost', ()=> {
     console.log(`Listening on http://localhost:3000`)

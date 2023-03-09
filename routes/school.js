@@ -5,7 +5,6 @@ const schoolRouter = express.Router();
 schoolRouter
     .get('/', (req, res) => {
 
-
         res.render('groups/groupsAll', {
                 groups : db.getAllGroups(),
             })
@@ -19,6 +18,7 @@ schoolRouter
     .post('/group-added', (req, res) => {
         const id = db.createGroup(req.body);
         res.redirect('/')
+        console.log(req.body);
     })
 
     .get('/group/edit-group/:id', (req, res) => {
@@ -34,8 +34,11 @@ schoolRouter
 
 
     .delete('/:id', (req, res) => {
+        const deletedGroup = db.getOneGroup(req.params.id).groupName;
         db.deleteGroup(req.params.id);
-        res.send('ok')
+        res.render('groups/group-deleted', {
+            deletedGroup,
+        })
     })
 
 

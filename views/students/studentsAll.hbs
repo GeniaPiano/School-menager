@@ -30,11 +30,11 @@
        </div>
 
 
-       <form method="POST" action="/school/student/edit/{{students.id}}?_method=PUT">
+       <form method="GET" action="/school/students/edit/{{this.id}}">
            <button type="submit">edit student</button>
        </form>
 
-       <form method="POST" action="/school/student/delete{{students.id}}?_method=DELETE">
+       <form method="POST" action="/school/students/delete/{{this.id}}?_method=DELETE">
            <button type="submit">delete student</button>
        </form>
 

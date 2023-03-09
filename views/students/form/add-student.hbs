@@ -31,36 +31,16 @@
                 <textarea name="notes" rows="5" cols="33"></textarea>
             </p>
         </div>
-        
+
         <div>
-            <p>
-                    {{#if groups}}
-                        <h3>
-                            Choose a group
-                        </h3>
-                        {{#each groups}}
-                            <input type="radio" name="groupId" id="{{this.groupName}}" value="{{this.id}}" >
-                            <label for="{{this.groupName}}">{{this.groupName}}</label>
-                        {{/each}}
 
-                    {{else}}
-                        <strong>
-                            No groups to choose in database. <br>
-                            Student will be added to main list.
-                        </strong>
-                    {{/if}}
-
-                </select>
-             
-            </strong>
-            
 
         </div>
-        
+
         <button type="submit">Add</button>
 
 
-
+        {{> groups-radio-inputs}}
 
 
     </form>

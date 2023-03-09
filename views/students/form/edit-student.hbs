@@ -1,0 +1,48 @@
+<div class="background">
+    <h2>
+        Editing student
+    </h2>
+
+
+    <form method="POST" action="/school/students/edited/{{studentOne.id}}?_method=PUT">
+
+        <div>
+            <p>
+                <label for="name">name</label>
+            </p>
+            <p>
+                <input type="text" name="name" value="{{studentOne.name}}" required>
+            </p>
+
+            <p>
+                <label for="surname">surname</label>
+            </p>
+            <p>
+                <input type="text" name="surname" value="{{studentOne.surname}}" required>
+            </p>
+
+            <p>
+                <label for="mail">mail</label>
+            </p>
+            <p>
+                <input type="mail" name="mail" value="{{studentOne.mail}}" required>
+            </p>
+            <p>
+                <label> notes </label>
+            </p>
+            <p>
+                <textarea name="notes" rows="5" cols="33" value="{{studentOne.notes}}"></textarea>
+            </p>
+        </div>
+        <div>
+
+            {{> groups-radio-inputs}}
+
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+
+
+</div>
