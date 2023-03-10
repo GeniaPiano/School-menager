@@ -1,8 +1,15 @@
+/*------------ALL GROUP PAGE-------------*/
+
+
 .one-group {
     display: flex;
     justify-content: space-between;
     transition: 0.3s ease;
     }
+
+.one-group-div {
+    padding-bottom: 40px;
+}
 
 .one-group:hover {
     filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 0.2));
@@ -42,10 +49,11 @@
     width:36px;
     height:36px;
     text-decoration: none;
+    background-color: var(--pinkRed);
     filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
-    border: solid 3px var(--lightPink);
     border-radius: 10px;
     transition: 0.5s ease-in-out;
+
 }
 
 .icon-big {
@@ -65,7 +73,7 @@
 
 .icon:hover {
     transform: translateY(7px);
-    background-color: var(--pink);
+    background-color: var(--darkPink);
 }
 
 .icon-big:hover {
@@ -98,6 +106,82 @@
     padding-top: 6px;
     color: var(--yellow);
     font-size: 14px;
+}
+
+
+/*------------ONE GROUP PAGE--------------*/
+.one-group-with-icons-div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.group-name{
+   font-size: 25px;
+}
+
+
+.one-group-icons{
+    margin-left: 10px;
+    display: flex;
+    gap:3px;
+}
+
+.big {
+    margin-top: 10px;
+    border: solid var(--lightYellow) 3px;
+    background-color: var(--lightYellow);
+    filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
+}
+
+.big:hover {
+    background: var(--darkYellow);
+    border: solid var(--darkYellow) 3px;
+}
+
+.danger {
+   border: solid var(--darkPink) 3px;
+   filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
+   background: var(--darkPink);
+
+}
+.danger:hover{
+    border: solid #d22626 3px;
+    background: #d22626;
+    opacity: 0.8;
+
+}
+
+.teacher-name-div {
+    display: flex;
+
+    margin:15px 0 20px 0 ;
+    padding-bottom: 10px;
+    flex-direction: column;
+    border-bottom: solid 2px var(--grey);
+}
+.teacher-name-div p {
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    color:var(--yellow);
+
+}
+
+.student-div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.student-name {
+    padding-top: 10px;
+}
+
+.student-icons-div {
+    display: flex;
+    gap: 3px;
+
 }
 
 

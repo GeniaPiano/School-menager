@@ -22,6 +22,7 @@ studentsRouter
     .post('/added', (req, res)=> {
         const groupId = req.body.groupId;
         createStudentWithGroup(req, res, groupId);
+
     })
 
     .get('/edit/:studentId', (req, res) => {
@@ -42,9 +43,15 @@ studentsRouter
     })
 
     .get('/one/:studentId', (req, res) => {
+        const {studentId} = req.params;
+        const {groupId} = db.getOneStudent(studentId);
+        const {level} = db.getOneGroup(groupId);
+        console.log(groupId)
         res.render('students/student-one', {
-            studentOne: db.getOneStudent(req.params.studentId),
-        })
+            studentOne: db.getOneStudent(studentId),
+            level,
+                   })
+
     })
 
     .delete('/delete/:studentId', (req, res) => {

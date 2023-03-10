@@ -1,0 +1,144 @@
+input textarea{
+    caret-color: var(--yellow);
+    caret-shape: block;
+}
+
+input, select, textarea {
+    color: var(--darkGrey);
+}
+
+input:focus {
+    color:var(--darkYellow);
+    font-size: 16px;
+}
+
+textarea:focus {
+    color:var(--darkYellow);
+    font-size: 16px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.title-label {
+    margin: 25px 25px 5px 25px;
+    font-size: 16px;
+    color: var(--darkYellow);
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.input-write {
+    width: 70vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid var(--grey);
+    margin: 0;
+    transition: 0.5s linear;
+    outline: none;
+}
+
+.input-write:hover{
+    border: 3px solid var(--yellow);
+    transition: 0.5s linear;
+}
+
+
+.input-write:focus {
+    border: 3px solid var(--yellow);
+}
+
+.level-title {
+    margin: 25px;
+}
+
+.input-radio-div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    gap:5px;
+}
+
+.radio-para {
+    width: 30%;
+    border-radius: 20px;
+    border: 2px solid var(--grey);
+    padding: 10px;
+}
+
+.radio-para:hover{
+    border: 3px solid var(--yellow);
+    transition: 0.5s linear;
+}
+
+.buttons-form-div {
+    display: flex;
+    gap:5px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.go-btn {
+    text-align: center;
+}
+
+.form-button {
+    background-color: var(--lightYellow);
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--deepDarkGrey);
+    transition: 0.7s;
+}
+
+
+.form-button:hover {
+    background-color: var(--yellow);
+    transform: scale(1.1);
+}
+
+.form-button:active{
+    opacity: 0.5;
+}
+
+
+
+@media screen and (max-width: 768px) and (max-width: 1260px)  {
+    .input-radio-div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .radio-para {
+        width: 100%;
+    }
+    .title-label {
+        font-size: 12px;
+    }
+    .form-button {
+        width: 100px;
+    }
+}
+.choose-group-div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+

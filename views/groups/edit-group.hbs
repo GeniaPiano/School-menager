@@ -1,47 +1,65 @@
-<div class="background">
+<div class="background form-wrapper">
     <h2>Editing group {{oneGroup.groupName}}</h2>
-    <a href="/school/group/{{oneGroup.id}}">go back</a>
 </div>
 
-<div class="background">
-
+<div class="background form-wrapper ">
+ <div>
     <form method="POST" action="/school/group/group-edited/{{oneGroup.id}}?_method=PUT">
-        <p>
+
+        <p class="title-label">
             <label>group name</label>
         </p>
         <p>
-            <input value="{{oneGroup.groupName}}" type="text" name="groupName" required>
+            <input class="input-write" value="{{oneGroup.groupName}}" type="text" name="groupName" required>
         </p>
 
-        <p>Level</p>
-        <p>
-            <input type="radio" name="level" id="level" value="intermediate" required >
-            <label for="level">Intermediate</label>
-        </p>
-
-        <p>
-            <input type="radio" name="level" id="level" value="advanced" required >
-            <label for="level">Advanced</label>
-        </p>
-
-        <p>
-            <input type="radio" name="level" id="level" value="business" required >
-            <label for="level">Business</label>
-        </p>
-
-
-
-
-        <p>
-            <label>teacher</label>
+        <p class="title-label ">
+            <label>teacher name</label>
         </p>
         <p>
-            <input value="{{oneGroup.teacherName}}" type="text" name="teacherName">
+            <input class="input-write"  value="{{oneGroup.teacherName}}" type="text" name="teacherName">
         </p>
 
-        <button type="submit">Save</button>
+        <p class="title-label">level</p>
+
+        <div class="input-radio-div">
+
+            <p class="radio-para">
+                <input class="input-select" type="radio" name="level" id="level" value="beginner" required >
+                <label for="level">Beginner</label>
+            </p>
+
+            <p class="radio-para">
+                <input class="input-select" type="radio" name="level" id="level" value="intermediate" required >
+                <label for="level">Intermediate</label>
+            </p>
+
+            <p class="radio-para">
+                <input class="input-select" type="radio" name="level" id="level" value="advanced" required >
+                <label for="level">Advanced</label>
+            </p>
+
+            <p class="radio-para">
+                <input class="input-select" type="radio" name="level" id="level" value="business" required >
+                <label for="level">Business</label>
+            </p>
+        </div>
+
+
+
+
+        <div class="buttons-form-div">
+            <button class="form-button" type="submit">
+                save
+            </button>
+
+            {{>go-back-button}}
+
+        </div>
 
     </form>
+ </div>
+
 </div>
 
 

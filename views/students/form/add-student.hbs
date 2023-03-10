@@ -1,49 +1,50 @@
-<div class="background">
+<div class="background form-wrapper">
 
-<h2>Add new student</h2>
+    <h2>Add new student</h2>
+
 
     <form method="POST" action="/school/students/added">
-        <div>
-            <p>
+
+
+            <p class="title-label">
                 <label for="name">name</label>
             </p>
             <p>
-                <input type="text" name="name" required>
+                <input class="input-write" type="text" name="name" required>
             </p>
 
-            <p>
+            <p class="title-label">
                 <label for="surname">surname</label>
             </p>
             <p>
-                <input type="text" name="surname" required>
+                <input class="input-write"  type="text" name="surname" required>
             </p>
 
-            <p>
+            <p class="title-label">
                 <label for="mail">mail</label>
             </p>
             <p>
-                <input type="mail" name="mail" required>
+                <input class="input-write"  type="mail" name="mail" required>
+            </p>
+            <p class="title-label">
+                <label >notes</label>
             </p>
             <p>
-                <label> notes </label>
+                <textarea class="input-write" name="notes" rows="5" cols="33"></textarea>
             </p>
-            <p>
-                <textarea name="notes" rows="5" cols="33"></textarea>
-            </p>
+
+
+
+        <div class="choose-group-div">
+            {{> groups-radio-inputs}}
         </div>
 
-        <div>
-
-
+        <div class="buttons-form-div">
+         <button class="form-button" type="submit">Add</button>
         </div>
-
-        <button type="submit">Add</button>
-
-
-        {{> groups-radio-inputs}}
-
 
     </form>
+
 
 
 </div>

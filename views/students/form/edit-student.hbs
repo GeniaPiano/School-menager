@@ -1,4 +1,4 @@
-<div class="background">
+<div class="background form-wrapper">
     <h2>
         Editing student
     </h2>
@@ -7,40 +7,50 @@
     <form method="POST" action="/school/students/edited/{{studentOne.id}}?_method=PUT">
 
         <div>
-            <p>
+
+            <p class="title-label">
                 <label for="name">name</label>
             </p>
             <p>
-                <input type="text" name="name" value="{{studentOne.name}}" required>
+                <input class="input-write" type="text" name="name" value=" {{studentOne.name}}" required>
             </p>
 
-            <p>
+            <p class="title-label">
                 <label for="surname">surname</label>
             </p>
             <p>
-                <input type="text" name="surname" value="{{studentOne.surname}}" required>
+                <input class="input-write"  type="text" name="surname" value=" {{studentOne.surname}}" required>
             </p>
 
-            <p>
+            <p class="title-label">
                 <label for="mail">mail</label>
             </p>
             <p>
-                <input type="mail" name="mail" value="{{studentOne.mail}}" required>
+                <input class="input-write"  type="mail" name="mail" value=" {{studentOne.mail}}" required>
+            </p>
+            <p class="title-label">
+                <label >notes</label>
             </p>
             <p>
-                <label> notes </label>
+                <textarea class="input-write" name="notes" rows="5" cols="33" value=" {{studentOne.notes}}"></textarea>
             </p>
-            <p>
-                <textarea name="notes" rows="5" cols="33" value="{{studentOne.notes}}"></textarea>
-            </p>
+
         </div>
-        <div>
+
+        <div class="input-radio-div choose-group-div">
 
             {{> groups-radio-inputs}}
 
         </div>
 
-        <button type="submit">Save</button>
+        <div class="buttons-form-div">
+            <button class="form-button" type="submit">Save</button>
+            <a class="form-button go-back-btn" href="/school">go home</a>
+
+        </div>
+
+
+
     </form>
 
 

@@ -1,39 +1,45 @@
-<h2>Add student to group {{oneGroup.groupName}} </h2>
+<div class="background form-wrapper">
+
+    <h2>Add student to group {{oneGroup.groupName}} </h2>
 
 
 
 
-<form method="POST" action="/school/group/{{oneGroup.id}}">
-   <p>
-       <label for="name">name</label>
-   </p>
-   <p>
-       <input type="text" name="name" required>
-   </p>
+    <form method="POST" action="/school/group/{{oneGroup.id}}">
+        <p class="title-label">
+            <label for="name">name</label>
+        </p>
+        <p>
+            <input class="input-write" type="text" name="name" required>
+        </p>
 
-    <p>
-        <label for="surname">surname</label>
-    </p>
-    <p>
-        <input type="text" name="surname" required>
-    </p>
+        <p class="title-label">
+            <label for="surname">surname</label>
+        </p>
+        <p>
+            <input class="input-write"  type="text" name="surname" required>
+        </p>
 
-    <p>
-        <label for="mail">mail</label>
-    </p>
-    <p>
-        <input type="mail" name="mail" required>
-    </p>
-    <p>
-        <label >notes</label>
-    </p>
-    <p>
-        <textarea name="notes" rows="5" cols="33"></textarea>
-    </p>
-    <button type="submit">Add</button>
+        <p class="title-label">
+            <label for="mail">mail</label>
+        </p>
+        <p>
+            <input class="input-write"  type="mail" name="mail" required>
+        </p>
+        <p class="title-label">
+            <label >notes</label>
+        </p>
+        <p>
+            <textarea class="input-write" name="notes" rows="5" cols="33"></textarea>
+        </p>
+
+        <div class="buttons-form-div">
+            <button class="form-button" type="submit">add</button>
+            {{>go-back-button}}
+        </div>
+
+    </form>
 
 
 
-
-
-</form>
+</div>

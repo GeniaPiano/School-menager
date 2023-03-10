@@ -9,9 +9,11 @@
     --darkPink: #d5726d;
     --pink: rgba(203, 101, 124, 0.17);
     --lightPink: #e5b2af;
+    --pinkRed: rgba(255, 92, 92, 0.4);
     --lightPurple: #ECEFF7;
     --darkPurple: #C0C7D6;
-    --yellow: #e8b955;
+    --yellow: #ffbd4a;
+    --darkYellow: #cc8f05;
     --lightYellow: rgba(243, 194, 91, 0.77);
 }
 
@@ -28,6 +30,10 @@ html {
 
 button, a {
     font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--deepDarkGrey)
 }
 
 button {
@@ -105,6 +111,8 @@ body {
 .nav-link:hover{
     filter: drop-shadow(2px 1px 1px rgb(0 0 0 / 0.2));
     border-bottom: solid 2px var(--yellow);
+    transform: scaleX(1.1);
+
 
 
 }
@@ -124,18 +132,39 @@ body {
 
 
 /*---------------FOOTER----------*/
+/*.body-and-footer {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    */
+
+
+/*}*/
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: var(--deepDarkGrey);
-    font-weight: bold;
-    right: 0;
-    left: 0;
+    clear: both;
+    height: 30px;
+    padding: 20px 20px 30px 20px;
+
+
 }
 
 .author-name {
-    color: #cbb947;
+    color: var(--darkPink);
+    font-weight:bold;
+}
+
+
+/*-------------SCROLL----------*/
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grey);
+    border-radius: 50px;
 }
 
 

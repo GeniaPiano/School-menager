@@ -1,43 +1,50 @@
-<h2>Add new group</h2>
+<div class="background title form-wrapper">
+
+    <h2>Add new group</h2>
+    <form method="POST" action="/school/group-added">
+        <p class="title-label">
+            <label>group name</label>
+        </p>
+        <p>
+            <input  class="input-write" type="text" name="groupName" required>
+        </p>
+
+        <p class="title-label">
+            <label>teacher name</label>
+        </p>
+        <p>
+            <input  class="input-write"  type="text" name="teacherName" required>
+        </p>
+
+        <p class="title-label">level</p>
+
+        <div class="input-radio-div">
+            <p class="radio-para">
+                <input type="radio" name="level" id="level" value="beginner" required >
+                <label for="level">Beginner</label>
+            </p>
+
+            <p class="radio-para">
+                <input type="radio" name="level" id="level" value="intermediate" required >
+                <label for="level">Intermediate</label>
+            </p>
+
+            <p class="radio-para">
+                <input type="radio" name="level" id="level" value="advanced" required >
+                <label for="level">Advanced</label>
+            </p>
+
+            <p class="radio-para">
+                <input type="radio" name="level" id="level" value="business" required >
+                <label for="level">Business</label>
+            </p>
+        </div>
 
 
-<form method="POST" action="/school/group-added">
-    <p>
-        <label>group name</label>
-    </p>
-    <p>
-        <input type="text" name="groupName" required>
-    </p>
 
 
-    <p>
-        <input type="radio" name="level" id="level" value="beginner" required >
-        <label for="level">Beginner</label>
-    </p>
-
-    <p>
-        <input type="radio" name="level" id="level" value="intermediate" required >
-        <label for="level">Intermediate</label>
-    </p>
-
-    <p>
-        <input type="radio" name="level" id="level" value="advanced" required >
-        <label for="level">Advanced</label>
-    </p>
-
-    <p>
-        <input type="radio" name="level" id="level" value="business" required >
-        <label for="level">Business</label>
-    </p>
-
-
-    <p>
-        <label>teacher name</label>
-    </p>
-    <p>
-        <input type="text" name="teacherName" required>
-    </p>
-
-    <button type="submit">Add </button>
+        <button class="form-button" type="submit">Add </button>
 
 </form>
+
+</div>

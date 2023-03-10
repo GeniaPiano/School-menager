@@ -1,8 +1,16 @@
-<div class="background">
+<div class="background form-wrapper">
 
-    {{studentOne.name}} {{studentOne.surname}} has been edited.
+    <div class="title">
+        {{studentOne.name}} {{studentOne.surname}} has been edited.
+    </div>
+
+    <div class="buttons-form-div">
 
 
+        <a class="form-button student-btn go-btn" href="/school/students/one/{{studentOne.id}}">go for details</a>
+        <a class="form-button student-btn go-btn" href="/school">go home</a>
+
+    </div>
 
 
 </div>
