@@ -7,7 +7,7 @@ const {StudentRecord, GroupRecord, TeacherRecord} = require("../record/records-t
 class Db {
     constructor(dbFileGroups, dbFileTeachers, dbFileStudents) {
         this.dbFileGroups = join (__dirname, '../data', dbFileGroups);
-        this.dbFileTeachers = join (__dirname, '../data', dbFileTeachers);
+        //this.dbFileTeachers = join (__dirname, '../data', dbFileTeachers);
         this.dbFileStudents = join (__dirname, '../data', dbFileStudents)
         this._loadGroups();
         // this._loadTeachers();
@@ -48,11 +48,13 @@ class Db {
 
     createStudent(obj, groupName, groupId) {
         const id = uuid();
+        const {level} =db.getOneGroup(groupId)
         this._dataStudents.unshift(new StudentRecord({
             id: id,
             ...obj,
             groupName: groupName,
             groupId: groupId,
+            level,
             }));
         this._saveStudents();
         return id;

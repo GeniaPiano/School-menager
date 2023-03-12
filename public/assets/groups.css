@@ -1,5 +1,10 @@
 /*------------ALL GROUP PAGE-------------*/
-
+.group-list-title {
+    margin: 10px 25px;
+    padding: 5px 30px;
+    font-size:25px;
+    font-weight: bold;
+}
 
 .one-group {
     display: flex;
@@ -139,7 +144,6 @@
 }
 
 .danger {
-
    filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
    background: var(--pinkRed);
 

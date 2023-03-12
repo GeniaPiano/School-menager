@@ -1,5 +1,5 @@
 <div class="add">
-    <a  href="school/add-new-group">
+    <a  href="/school/add-new-group">
         <img class="icon icon-big" src="/icons/add-people-icon.svg" alt="icon add group">
     </a>
     <a  href="/school/students/add-student">
@@ -24,11 +24,15 @@
    <div class="student-div">
 
        <div>
-           {{this.name}} {{this.surname}}
+           <p>
+             <strong>
+                 {{this.name}} {{this.surname}}
+             </strong>
+           </p>
 
            {{#if this.groupId}}
 
-            <p>{{this.groupName}} </p>
+            <p>{{this.groupName}} {{ this.level }} </p>
 
            {{else}}
                <p>Not assigned.</p>

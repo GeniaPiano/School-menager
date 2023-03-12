@@ -1,35 +1,54 @@
-<div class="background ">
+<div class="background one-student-wrapper">
 
-    <div>{{ studentOne.name }} {{ studentOne.surname }}</div>
-    {{#if level}}
-        <div>
-            {{studentOne.groupName}} {{ level }}
-        </div>
-    {{ else }}
-        <div>
-            Not assigned to any group.
-        </div>
+    <div>
+        <p class="student-name-tittle">
+            {{ studentOne.name }} {{ studentOne.surname }}
+        </p>
 
+        {{#if level}}
+            <p class="group-name-one-student-view">
+                {{studentOne.groupName}} {{ level }}
+            </p>
+        {{ else }}
+            <p>
+                Not assigned to any group.
+            </p>
 
-    {{/if}}
+        {{/if}}
 
-
-
-
-
-    <div> mail: {{ studentOne.mail }} </div>
-
-
-
-
-
-
+        <p class="mail">
+            <img class="small" src="/icons/mail-icon.svg" alt="">
+            <span>
+                {{ studentOne.mail }}
+            </span>
+        </p>
 
 
-    <a href="/school/students/edit/{{studentOne.id}}">edit</a>
-    delete
-    go home
+        {{#if notes}}
+            <p>notes: {{ notes }}</p>
+        {{/if}}
+    </div>
 
 
+
+
+
+    <div class="student-icons-div">
+        <a href="/school/students/edit/{{this.id}}">
+            <img class="icon" src="/icons/edit-student-icon.svg" alt="edit student icon">
+        </a>
+        <form method="POST" action="/school/students/delete/{{this.id}}?_method=delete">
+            <button type="submit">
+                <img class="icon danger" src="/icons/trash-icon.svg" alt="">
+            </button>
+        </form>
+    </div>
+
+
+</div>
+
+<div class="buttons-form-div">
+
+    <a class="form-button go-back-btn" href="/school">go home</a>
 
 </div>

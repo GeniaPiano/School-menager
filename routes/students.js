@@ -11,6 +11,7 @@ studentsRouter
             res.render('students/studentsAll', {
                 students: db.getAllStudents(),
             })
+
     })
 
     .get('/add-student', (req, res) => {
@@ -58,14 +59,10 @@ studentsRouter
             })
         }
 
-
-
-
     })
 
     .delete('/delete/:studentId', (req, res) => {
         const {name, surname} = db.getOneStudent(req.params.studentId);
-        console.log(name, surname);
         db.deleteStudent(req.params.studentId)
 
         res.render('students/student-deleted', {
