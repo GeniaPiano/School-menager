@@ -45,18 +45,33 @@ studentsRouter
     .get('/one/:studentId', (req, res) => {
         const {studentId} = req.params;
         const {groupId} = db.getOneStudent(studentId);
-        const {level} = db.getOneGroup(groupId);
-        console.log(groupId)
-        res.render('students/student-one', {
-            studentOne: db.getOneStudent(studentId),
-            level,
-                   })
+        if (groupId) {
+            const {level} = db.getOneGroup(groupId);
+            res.render('students/student-one', {
+                studentOne: db.getOneStudent(studentId),
+                level,
+            })
+        } else {
+            res.render('students/student-one', {
+                studentOne: db.getOneStudent(studentId),
+                level: null,
+            })
+        }
+
+
+
 
     })
 
     .delete('/delete/:studentId', (req, res) => {
+        const {name, surname} = db.getOneStudent(req.params.studentId);
+        console.log(name, surname);
         db.deleteStudent(req.params.studentId)
-        res.render('students/student-deleted')
+
+        res.render('students/student-deleted', {
+            name,
+            surname,
+        })
 
     })
 

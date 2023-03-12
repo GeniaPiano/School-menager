@@ -1,7 +1,7 @@
 :root {
     --white: #FFFF;
     --lightGrey: #F7F8FA;
-    --grey: #C0C7D6;
+    --grey: #ccc6c6;
     --darkGrey: rgba(23,22,22,0.45);
     --deepDarkGrey: rgba(23, 22, 22, 0.75);
     --black: #111111;
@@ -9,7 +9,7 @@
     --darkPink: #d5726d;
     --pink: rgba(203, 101, 124, 0.17);
     --lightPink: #e5b2af;
-    --pinkRed: rgba(255, 92, 92, 0.4);
+    --pinkRed: rgba(250, 50, 50, 0.4);
     --lightPurple: #ECEFF7;
     --darkPurple: #C0C7D6;
     --yellow: #ffbd4a;
@@ -54,6 +54,8 @@ body {
     height: 100vh;
     background-color: var(--lightGrey);
 }
+
+
 
 /*---------------STYLING HEADER---------*/
 
@@ -113,8 +115,10 @@ body {
     border-bottom: solid 2px var(--yellow);
     transform: scaleX(1.1);
 
+}
 
-
+.center {
+    text-align: center;
 }
 
 
@@ -130,15 +134,34 @@ body {
 
 }
 
+.title {
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+}
 
-/*---------------FOOTER----------*/
-/*.body-and-footer {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    */
+.big-padding{
+    padding-top: 30px;
+    padding-bottom:100px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-long-text {
+    width: 300px;
+    padding:5px 5px 15px 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
 
 
-/*}*/
 
 footer {
     text-align: center;
@@ -166,5 +189,7 @@ footer {
     background: var(--grey);
     border-radius: 50px;
 }
+
+
 
 

@@ -1,11 +1,34 @@
 <div class="background ">
 
-<div>{{ studentOne.name }} {{ studentOne.surname }}</div>
+    <div>{{ studentOne.name }} {{ studentOne.surname }}</div>
+    {{#if level}}
+        <div>
+            {{studentOne.groupName}} {{ level }}
+        </div>
+    {{ else }}
+        <div>
+            Not assigned to any group.
+        </div>
 
-<div> {{ studentOne.groupName }} {{ level }} </div>
 
-<div> {{ studentOne.mail }} </div>
-<a href="">edit</a>
+    {{/if}}
+
+
+
+
+
+    <div> mail: {{ studentOne.mail }} </div>
+
+
+
+
+
+
+
+
+    <a href="/school/students/edit/{{studentOne.id}}">edit</a>
+    delete
+    go home
 
 
 

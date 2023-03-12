@@ -1,8 +1,20 @@
-<h2>
-    Student {{studentOne.name}} {{studentOne.surname}} has been removed from the group {{groupName}}.
-</h2>
+<div class="background">
+
+<p class="title">Student {{studentOne.name}} {{studentOne.surname}} </p>
+
+<p class="center"> has been removed from the group {{groupName}}.   </p>
 
 
-<a href="/school/group/{{groupId}}">Go back to the group details</a>
 
-<a href="/school/students/one/{{studentOne.id}}">Go to the student details to assign him to a group</a>
+
+
+    <div class="buttons-form-div ">
+
+        <a class="form-button button-long-text" href="/school/group/{{groupId}}"> back to group</a>
+
+        <a class="form-button button-long-text" href="/school/students/one/{{studentOne.id}}">see student details </a>
+
+
+    </div>
+
+</div>

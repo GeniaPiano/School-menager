@@ -1,4 +1,11 @@
-<a href="/school/students/add-student">Add student</a>
+<div class="add">
+    <a  href="school/add-new-group">
+        <img class="icon icon-big" src="/icons/add-people-icon.svg" alt="icon add group">
+    </a>
+    <a  href="/school/students/add-student">
+        <img class="icon icon-big" src="/icons/add-person-big-icon.svg" alt="icon add student">
+    </a>
+</div>
 
 
 
@@ -14,29 +21,36 @@
 
 {{#each students}}
 
-   <div>
+   <div class="student-div">
 
        <div>
            {{this.name}} {{this.surname}}
 
            {{#if this.groupId}}
 
-               {{this.groupName}}
+            <p>{{this.groupName}} </p>
 
            {{else}}
-               <strong>Not assigned to any group. Edit student to assign.</strong>
+               <p>Not assigned.</p>
            {{/if}}
 
        </div>
 
 
-       <form method="GET" action="/school/students/edit/{{this.id}}">
-           <button type="submit">edit student</button>
-       </form>
 
-       <form method="POST" action="/school/students/delete/{{this.id}}?_method=DELETE">
-           <button type="submit">delete student</button>
-       </form>
+       <div class="student-icons-div">
+           <a href="/school/students/one/{{this.id}}">
+               <img class="icon" src="/icons/details-icon.svg" alt="edit student icon">
+           </a>
+           <a href="/school/students/edit/{{this.id}}">
+               <img class="icon" src="/icons/edit-student-icon.svg" alt="edit student icon">
+           </a>
+           <form method="POST" action="/school/students/delete/{{this.id}}?_method=delete">
+               <button type="submit">
+                   <img class="icon danger" src="/icons/trash-icon.svg" alt="">
+               </button>
+           </form>
+       </div>
 
 
 

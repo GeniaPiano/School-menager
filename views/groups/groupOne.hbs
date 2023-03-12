@@ -40,16 +40,8 @@
       <div class="student-name">
           {{this.name}} {{this.surname}}
       </div>
-      <div class="student-icons-div">
-          <a href="/school/students/edit/{{this.id}}">
-              <img class="icon" src="/icons/edit-student-icon.svg" alt="edit student icon">
-          </a>
-          <form method="POST" action="/school/students/remove-from-group/{{@root.oneGroup.id}}/{{this.id}}?_method=put">
-              <button type="submit">
-                  <img class="icon" src="/icons/trash-icon.svg" alt="">
-              </button>
-          </form>
-      </div>
+
+{{>student-icons}}
 
   </div>
 

@@ -1,4 +1,4 @@
-<div class="background form-wrapper">
+<div class="background title form-wrapper">
     <h2>
         Editing student
     </h2>
@@ -6,7 +6,7 @@
 
     <form method="POST" action="/school/students/edited/{{studentOne.id}}?_method=PUT">
 
-        <div>
+
 
             <p class="title-label">
                 <label for="name">name</label>
@@ -32,12 +32,11 @@
                 <label >notes</label>
             </p>
             <p>
-                <textarea class="input-write" name="notes" rows="5" cols="33" value=" {{studentOne.notes}}"></textarea>
+                <textarea class="input-write" name="notes"  value=" {{studentOne.notes}}"></textarea>
             </p>
 
-        </div>
 
-        <div class="input-radio-div choose-group-div">
+        <div class="choose-group-div">
 
             {{> groups-radio-inputs}}
 

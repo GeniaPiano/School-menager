@@ -1,10 +1,9 @@
-<div class="background form-wrapper">
+<div class="background title form-wrapper">
 
     <h2>Add new student</h2>
 
 
     <form method="POST" action="/school/students/added">
-
 
             <p class="title-label">
                 <label for="name">name</label>
@@ -13,6 +12,8 @@
                 <input class="input-write" type="text" name="name" required>
             </p>
 
+
+        <div>
             <p class="title-label">
                 <label for="surname">surname</label>
             </p>
@@ -26,13 +27,15 @@
             <p>
                 <input class="input-write"  type="mail" name="mail" required>
             </p>
+
+
             <p class="title-label">
                 <label >notes</label>
             </p>
             <p>
                 <textarea class="input-write" name="notes" rows="5" cols="33"></textarea>
             </p>
-
+        </div>
 
 
         <div class="choose-group-div">

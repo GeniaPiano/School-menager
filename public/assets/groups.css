@@ -49,16 +49,16 @@
     width:36px;
     height:36px;
     text-decoration: none;
-    background-color: var(--pinkRed);
+    background-color: var(--grey);
     filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
     border-radius: 10px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease;
 
 }
 
 .icon-big {
     height: 40px;
-    width: 40vw;
+    width: 42vw;
     background-color: var(--lightYellow);
     border-radius: 10px;
     border: none;
@@ -73,7 +73,7 @@
 
 .icon:hover {
     transform: translateY(7px);
-    background-color: var(--darkPink);
+    background-color: var(--darkGrey);
 }
 
 .icon-big:hover {
@@ -129,25 +129,23 @@
 
 .big {
     margin-top: 10px;
-    border: solid var(--lightYellow) 3px;
     background-color: var(--lightYellow);
     filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
 }
 
 .big:hover {
     background: var(--darkYellow);
-    border: solid var(--darkYellow) 3px;
+
 }
 
 .danger {
-   border: solid var(--darkPink) 3px;
+
    filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.2));
-   background: var(--darkPink);
+   background: var(--pinkRed);
 
 }
 .danger:hover{
-    border: solid #d22626 3px;
-    background: #d22626;
+    background: #f14040;
     opacity: 0.8;
 
 }
@@ -171,6 +169,7 @@
 .student-div {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 15px;
 
 }
 
@@ -180,7 +179,7 @@
 
 .student-icons-div {
     display: flex;
-    gap: 3px;
+    gap: 5px;
 
 }
 
