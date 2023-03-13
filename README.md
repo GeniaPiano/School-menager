@@ -1,5 +1,9 @@
 # School-menager
 
+
+live preview: 
+https://school-menager--geniapiano.repl.co/school
+
 I have build this program using:
 node.js, express.js, handlebars and css.
 
